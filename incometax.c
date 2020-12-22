@@ -9,16 +9,16 @@ int main() {
 		
 		printf("No Taxes Applicable.\n");
 	}
-	else if(a>=250000 && a<500000){
-		tax=tax+0.05*(a-250000);
+	if(a>=250000 && a<500000){
+		tax=0.05*(a-250000);
 		printf("Your Total Tax is %f", tax);
 	}
-	else if(a>=500000 && a<1000000){
-		tax=tax+0.20*(a-500000);
+	if(a>=500000 && a<=1000000){
+		tax=0.20*(a-500000)+12500;
 		printf("Your Total Tax is %f", tax);
 	}
-	else {
-		tax=tax+0.30*(a-1000000);
+	if(a>1000000){
+		tax=0.30*(a-1000000)+100000+12500;
 		 printf("Your Total Tax is %f", tax);
 		}
 		return 0;
